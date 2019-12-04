@@ -13,11 +13,8 @@ import './App.scss'
 
 // home-brewed
 import AppsList from './pages/AppsList.js'
+import AppFocus from './pages/AppFocus.js'
 import Nav from './layouts/Nav.js'
-
-function MyApp () {
-  return <h1>My App</h1>
-}
 
 function App() {
   return (
@@ -29,10 +26,8 @@ function App() {
         </header>
         <main className="App-main">
           <Switch>
-            <Route exact path="/apps/:appName" component={MyApp} />
-            <Route exact path="/apps">
-              <AppsList />
-            </Route>
+            <Route exact path="/apps/:appName" component={AppFocus} />
+            <Route exact path="/apps" component={AppsList} />
             <Route exact path="/">
               <Redirect to="/apps" />
             </Route>

@@ -5,12 +5,17 @@ export default function Metric (props) {
     return null
   }
   //
+  let text = ''
   if (props.type === 'running-apps') {
-    return <div>{props.value}&nbsp;currently running apps</div>
+    text = 'currently running apps'
   }
   if (props.type === 'avg-time') {
-    return <div>{props.value}&nbsp;average time per app</div>
+    text = 'average time per app'
   }
-  console.log(`${props.type} is not a supported Metric type`)
-  return null
+  return (
+    <div className="Metric">
+      <div className="Metric__value">{props.value}</div>
+      <div className="Metric__text">{text}</div>
+    </div>
+  )
 }

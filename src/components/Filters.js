@@ -1,11 +1,11 @@
 import React from 'react'
-import { COMPLETED, RUNNING, PENDING, FAILED } from '../utils/statuses'
+import { COMPLETED, RUNNING, PENDING, FAILED } from '../utils'
 
 export default class Filters extends React.Component {
   constructor(props) {
     super(props)
     this.handleClick = this.handleClick.bind(this)
-    this.state = { statuses: [COMPLETED, RUNNING, PENDING, FAILED], selected: null }
+    this.state = { statuses: [COMPLETED, RUNNING, PENDING, FAILED] }
   }
 
   handleClick(status) {
@@ -17,7 +17,7 @@ export default class Filters extends React.Component {
   }
 
   getClass(status) {
-    if (this.props.selectedFilter === status) return 'Button Button--active'
+    if (this.props.statusFilter === status) return 'Button Button--active'
     return 'Button'
   }
 
@@ -31,7 +31,7 @@ export default class Filters extends React.Component {
     })
     return (
       <div className="Filters">
-        <button className={this.getClass(null)} onClick={this.handleClick.bind(this, null)}>All <em className="Button__badge">{this.props.apps.length}</em></button>
+        <button className={this.getClass('')} onClick={this.handleClick.bind(this, '')}>All <em className="Button__badge">{this.props.apps.length}</em></button>
         {filters}
       </div>
     )

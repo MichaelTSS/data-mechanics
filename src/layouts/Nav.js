@@ -6,12 +6,10 @@ import {
 } from 'react-router-dom'
 
 function Link (props) {
-  if (props.match.params.appId) {
+  if (props.match.params.appName) {
     return (
       <React.Fragment>
-        <NavLink to="/apps">AppsList</NavLink>
-        &nbsp;>&nbsp;
-        <NavLink to={`/apps/${props.match.params.appName}`} activeClassName="active">{props.match.params.appId}</NavLink>
+        <NavLink exact to="/apps">AppsList</NavLink>&nbsp;>&nbsp;<NavLink to={`/apps/${props.match.params.appName}`} activeClassName="active">{props.match.params.appName}</NavLink>
       </React.Fragment>
     )
   }

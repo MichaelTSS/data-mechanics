@@ -8,15 +8,15 @@ import CheckIcon from '@material-ui/icons/Check'
 import TimelapseIcon from '@material-ui/icons/Timelapse'
 import Tooltip from '@material-ui/core/Tooltip'
 
-import { COMPLETED, RUNNING, PENDING, FAILED } from '../utils/statuses'
+import { COMPLETED, RUNNING, PENDING, FAILED } from '../utils'
 
 
 export const StatusIcon = function (props) {
   let icon;
-  if (props.status === COMPLETED) icon = <CheckIcon />
-  else if (props.status === RUNNING) icon = <TimelapseIcon />
-  else if (props.status === PENDING) icon = <HourglassEmptyIcon />
-  else if (props.status === FAILED) icon = <CloseIcon />
+  if (props.status === COMPLETED) icon = <CheckIcon fontSize="small" />
+  else if (props.status === RUNNING) icon = <TimelapseIcon fontSize="small" />
+  else if (props.status === PENDING) icon = <HourglassEmptyIcon fontSize="small" />
+  else if (props.status === FAILED) icon = <CloseIcon fontSize="small" />
   //
   if (props.to == null) return (
     <div className={`StatusIcon StatusIcon--slim StatusIcon--${props.status.toLowerCase()}`}>
@@ -40,7 +40,7 @@ export const StatusIconList = function (props) {
   //
   const executors = Object.keys(props.value).map(key => {
     const status = props.value[key]
-    return <StatusIcon fontSize="small" key={key} name={key} status={status} />
+    return <StatusIcon key={key} name={key} status={status} />
   })
   return (
     <React.Fragment>

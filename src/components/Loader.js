@@ -6,11 +6,15 @@ export default class Loader extends React.Component {
   render() {
     if (!this.props.isLoading) return null
     //
-    return <Spinner
-      type="TailSpin"
-      color="#282c34"
-      height={40}
-      width={100}
-    />
+    return (
+      <div className="container container--center">
+        <Spinner
+          type="TailSpin"
+          color="#282c34"
+          height={40}
+          width={100}
+        />
+      </div>
+    )
   }
 }

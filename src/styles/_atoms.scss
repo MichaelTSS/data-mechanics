@@ -13,8 +13,14 @@
     width: 28px;
     height: 28px;
     margin-right: 6px;
-    padding: 1px;
+    padding: 3px;
     border-radius: 16px;
+  }
+  &:not(.StatusIcon--slim):focus { outline: 0; }
+  &:not(.StatusIcon--slim):hover,
+  &:not(.StatusIcon--slim):active {
+    border-color: $light-text-color;
+    color: $text-color;
   }
   a {
     display: flex;
@@ -23,6 +29,12 @@
     color: inherit;
     text-transform: capitalize;
     text-decoration: none;
+    &:focus { outline: 0; }
+    &:hover,
+    &:active {
+      border-color: $light-text-color;
+      color: $text-color;
+    }
     span {
       line-height: 1em;
       font-size: 1em;
@@ -47,6 +59,7 @@
 .Button {
   display: inline-block;
   border: 1px solid $border-color;
+  color: $light-text-color;
   border-radius: 5px;
   padding: 3px 5px;
   min-width: 50px;
@@ -56,14 +69,11 @@
   cursor: pointer;
   font-size: .875em;
   &:focus { outline: 0; }
-  &:hover {
-    background-color: $border-color;
-  }
+  &:hover,
   &:active,
   &--active {
-    background-color: white;
-    border-color: $primary-color;
-    color: $primary-color;
+    border-color: $light-text-color;
+    color: $text-color;
   }
   &__badge {
     padding: 4px 5px;
@@ -75,4 +85,28 @@
     border-radius: 10px;
     margin-left: 6px;
   }
+}
+
+.Metric {
+  display: flex;
+  flex-direction: row;
+  &__value {
+    font-size: 3em;
+    text-align: center;
+    min-width: 20%;
+  }
+  &__text {
+    margin-left: 6px;
+    display: flex;
+    align-self: center;
+    text-transform: uppercase;
+  }
+}
+
+.Codeblock {
+  margin: 0 auto 2vh auto;
+  background-color: $text-color;
+  color: $background-color;
+  padding: 2vw 2vh;
+  width: 100%;
 }

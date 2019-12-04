@@ -1,7 +1,7 @@
 // nav + sidebar + main
 
 .App {
-  background-color: $background-color;
+  background-color: #ece8e836;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -11,13 +11,13 @@
   color: $text-color;
   header {
     height: 10vh;
-  }
-  nav, main {
-    width: 90vw;
-    margin: 0 auto;
+    display: flex;
   }
   main {
+    width: 90vw;
+    margin: 0 auto;
     min-height: 90vh;
+    height: auto;
   }
   .flex-grid,
   .container,
@@ -27,6 +27,12 @@
   }
   .container {
     border: 0;
-    text-align: center;
+    &--center {
+      text-align: center;
+    }
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0 1vw;
 }

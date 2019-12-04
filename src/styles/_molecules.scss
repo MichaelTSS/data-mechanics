@@ -2,12 +2,37 @@
 
 .Filters {
   display: flex;
-  margin-left: -5px;
   .Button {
-    margin: 0 5px;
+    margin: 0 10px;
+    border: 0;
+    padding: 6px 0;
+    border-radius: 0;
+    border-bottom: 3px solid transparent;
+    &--active {
+      border-color: $light-text-color;
+      color: $text-color;
+    }
   }
 }
 
 .Controller {
   justify-content: space-between;
+}
+
+nav {
+  width: 90vw;
+  margin: auto auto;
+
+  a {
+    border-bottom: 3px solid transparent;
+    color: $light-text-color;
+    text-decoration: none;
+    &:focus { outline: 0; }
+    &:hover,
+    &:active,
+    &.active {
+      border-color: $light-text-color;
+      color: $text-color;
+    }
+  }
 }
