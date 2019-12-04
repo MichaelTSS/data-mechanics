@@ -1,0 +1,78 @@
+// buttons, inputs, etc.
+
+.StatusIcon {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 3px 10px 3px 5px;
+  &--completed { color: $completed-color; border-color: $completed-color; }
+  &--failed { color: $failed-color; border-color: $failed-color; }
+  &--running { color: $running-color; border-color: $running-color; }
+  &--pending { color: $pending-color; border-color: $pending-color; }
+  &--slim {
+    width: 28px;
+    height: 28px;
+    margin-right: 6px;
+    padding: 1px;
+    border-radius: 16px;
+  }
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: inherit;
+    text-transform: capitalize;
+    text-decoration: none;
+    span {
+      line-height: 1em;
+      font-size: 1em;
+      margin-left: 6px;
+    }
+  }
+}
+
+.LastBuild,
+.Duration {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px 0;
+  span {
+    line-height: 1em;
+    font-size: 1em;
+    margin-left: 6px;
+  }
+}
+
+.Button {
+  display: inline-block;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  padding: 3px 5px;
+  min-width: 50px;
+  font-size: .7em;
+  text-transform: capitalize;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: .875em;
+  &:focus { outline: 0; }
+  &:hover {
+    background-color: $border-color;
+  }
+  &:active,
+  &--active {
+    background-color: white;
+    border-color: $primary-color;
+    color: $primary-color;
+  }
+  &__badge {
+    padding: 4px 5px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    display: inline-block;
+    background-color: hsla(0, 0%, 0%, 0.07);
+    border-radius: 10px;
+    margin-left: 6px;
+  }
+}

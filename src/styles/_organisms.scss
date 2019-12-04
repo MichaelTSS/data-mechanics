@@ -1,0 +1,37 @@
+// nav made of forms, <ul> of links, etc
+
+.flex-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.container {
+  //
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  font-size: .875em;
+  &__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .5vh 0;
+    border-bottom: 1px solid $border-color;
+    &--header {
+      span {
+        color: $light-text-color;
+        margin: 10px 0;
+      }
+    }
+    &__cell {
+      padding: 0 1%;
+      &--status { width: 20%; }
+      &--executors { width: 50%; }
+      &--duration { width: 20%; font-size: .875em; }
+      &--cta { width: 10%; text-align: center; }
+    }
+  }
+}

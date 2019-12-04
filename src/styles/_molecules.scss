@@ -1,0 +1,13 @@
+// forms made of buttons, inputs, etc.
+
+.Filters {
+  display: flex;
+  margin-left: -5px;
+  .Button {
+    margin: 0 5px;
+  }
+}
+
+.Controller {
+  justify-content: space-between;
+}

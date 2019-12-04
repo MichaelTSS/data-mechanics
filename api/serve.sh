@@ -11,4 +11,4 @@ fi
 
 # Run server
 cp db-truth.json db.json
-npx json-server db.json --id appName --routes routes.json
+npx json-server db.json --id appName --routes routes.json -p 4000

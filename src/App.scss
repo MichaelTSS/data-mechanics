@@ -1,0 +1,20 @@
+$primary-color: #009fe8;
+$secondary-color: #f28100;
+$background-color: white;
+$text-color: #282c34;
+$light-text-color: #707070;
+$border-color: #f0f0f0;
+
+$completed-color: #1aaa55;
+$failed-color: #db3b21;
+$running-color: #418cd8;
+$pending-color: #c4c4c4;
+
+@import './styles/_templates.scss';
+@import './styles/_pages.scss';
+@import './styles/_organisms.scss';
+@import './styles/_molecules.scss';
+@import './styles/_atoms.scss';
+
+
+

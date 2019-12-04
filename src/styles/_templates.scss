@@ -1,0 +1,32 @@
+// nav + sidebar + main
+
+.App {
+  background-color: $background-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4em;
+  color: $text-color;
+  header {
+    height: 10vh;
+  }
+  nav, main {
+    width: 90vw;
+    margin: 0 auto;
+  }
+  main {
+    min-height: 90vh;
+  }
+  .flex-grid,
+  .container,
+  .table {
+    margin: 2vh 0;
+    border: 1px solid $border-color;
+  }
+  .container {
+    border: 0;
+    text-align: center;
+  }
+}
