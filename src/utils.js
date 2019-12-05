@@ -9,9 +9,13 @@ export const getHumanDuration = function ({ startAt, endAt, duration }) {
   if (startAt && endAt) {
     const startM = moment(startAt)
     const endM = moment(endAt)
-    duration = endM.diff(startM)
+    duration = moment.duration(endM.diff(startM))
+  } else if (duration) {
+    duration = moment.duration(duration)
+  } else {
+    return '00:00:00'
   }
-  duration = moment.duration(duration)
+  //
   const H = duration.get('hours')
   const M = duration.get('minutes')
   const S = duration.get('seconds')

@@ -76,7 +76,7 @@ export default class AppsList extends React.Component {
       const endM = moment(app.status.terminationTime)
       return acc + endM.diff(startM)
     }, 0)
-    if (count === 0) return null
+    if (count === 0) return getHumanDuration({})
     //
     const duration = sum / count
     return getHumanDuration({ duration })

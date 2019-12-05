@@ -3,6 +3,7 @@ import { JSONViewer } from 'react-json-editor-viewer'
 
 export default function AppFocusConfig (props) {
   if (props.isLoading) return null
+  if (!props.app) return null
   //
   return (
     <div className="container">

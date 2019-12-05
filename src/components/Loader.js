@@ -7,13 +7,13 @@ export default class Loader extends React.Component {
     if (!this.props.isLoading) return null
     //
     return (
-      <div className="container container--center">
+      <div className="container container--center"><h3>
         <Spinner
           type="TailSpin"
           color="#282c34"
           height={40}
           width={100}
-        />
+        /></h3>
       </div>
     )
   }

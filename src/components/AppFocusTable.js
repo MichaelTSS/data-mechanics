@@ -7,6 +7,7 @@ import Duration from '../components/Duration'
 
 export default function AppFocusTable (props) {
   if (props.isLoading) return null
+  if (!props.app) return null
   //
   const name = props.app.appName
   const status = props.app.status.applicationState.state
